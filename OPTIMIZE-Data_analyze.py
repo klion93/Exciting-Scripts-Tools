@@ -16,6 +16,7 @@
 # 
 # EXPLANATION:
 #
+# Konstantin: Changed to make it work for more than 11 strain points, added save file for Fit Data
 #__________________________________________________________________________________________________
 
 from   pylab import *
@@ -440,11 +441,13 @@ if (mod == 'VOL'):
     x0 = [] ; x0 = vi
     y0 = [] ; y0 = ei
 
+    #%!%!%!%!%!%!%!%!%!% Save Fit Data in BM-fitdata.out %!%!%!%!%!%!%!%!%!%
     BMdata = open('BM-fitdata.out', 'w')
     for i in range(len(xx)):
         print >>BMdata, xx[i],'   ', yy[i]
     BMdata.close()
-
+    #%!%!%!%!%!%!%!%!%!%%!%!%!%!%!%!%!%!%!%%!%!%!%!%!%!%!%!%!%%!%!%!%!%!%!%
+    
 if (mod != 'VOL'):
     xlabel    = 'Physical strain $\epsilon$'
     ylabel    = 'Energy [Ha]'
