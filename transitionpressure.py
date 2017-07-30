@@ -118,24 +118,24 @@ plt.savefig('Transitionpressure.pdf', bbox_inches='tight', dpi=1000)
 ###### Find specific pressure/volume combination ##
 
 # gesucht p = 0.5GPa, p = 2.5 GPa für beta phase
-V_druck_05 = fsolve(V_gesucht, [700], xtol=0.000001, args=(P_eos, 0.5, parameters))
-print(V_druck_05)
-V_druck_25 = fsolve(V_gesucht, [700], xtol=0.000001, args=(P_eos, 2.5, parameters))
-print(V_druck_25)
+# V_druck_05 = fsolve(V_gesucht, [700], xtol=0.000001, args=(P_eos, 0.5, parameters))
+# print(V_druck_05)
+# V_druck_25 = fsolve(V_gesucht, [700], xtol=0.000001, args=(P_eos, 2.5, parameters))
+# print(V_druck_25)
 
-V_0 = 715.0484080774
-ratio_volume = V_0 / V_druck_05
-ratio_volume2 = V_0 / V_druck_25
+# V_0 = 715.0484080774
+# ratio_volume = V_0 / V_druck_05
+# ratio_volume2 = V_0 / V_druck_25
 # print(ratio_volume)
 # print(ratio_volume2)
 
 # DeltaV / V0 = e_xx + e_yy + e_zz = 3 * e
-volume_change = (V_0 - V_druck_05) / V_0
-volume_change1 = (V_0 - V_druck_25) / V_0
-print(volume_change / 3)
-print(volume_change1 / 3)
+# volume_change = (V_0 - V_druck_05) / V_0
+# volume_change1 = (V_0 - V_druck_25) / V_0
+# print(volume_change / 3)
+# print(volume_change1 / 3)
 
-V_druck_exciting_05 = 713.1865016428
-V_druck_exciting_25 = 705.1041835868
-print(P_eos(parameters[1],V_druck_exciting_05)*ToGPa)
-print(P_eos(parameters[1],V_druck_exciting_25)*ToGPa)
+# V_druck_exciting_05 = 713.1865016428
+# V_druck_exciting_25 = 705.1041835868
+# print(P_eos(parameters[1],V_druck_exciting_05)*ToGPa)
+# print(P_eos(parameters[1],V_druck_exciting_25)*ToGPa)
