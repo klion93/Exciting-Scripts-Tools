@@ -446,6 +446,10 @@ if (mod == 'VOL'):
     for i in range(len(xx)):
         print >>BMdata, xx[i],'   ', yy[i]
     BMdata.close()
+    
+    BMparameters = open('BM-parameters.out', 'w')
+    print >>BMparameters, 'E0','    ', 'V0', '    ', 'B0', '    ', 'Bp'
+    print >>BMparameters, E0,'    ', V0, '    ', B0, '    ', Bp
     #%!%!%!%!%!%!%!%!%!%%!%!%!%!%!%!%!%!%!%%!%!%!%!%!%!%!%!%!%%!%!%!%!%!%!%
     
 if (mod != 'VOL'):
